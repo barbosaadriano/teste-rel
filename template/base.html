@@ -1,0 +1,31 @@
+
+  <style type="text/css">
+    .box {
+      width: 50%;
+      min-height: 200px;
+      float: left;
+      overflow: hidden;
+    }
+    @media screen and (min-width: 500px) {
+     .box {
+      width: 25%;      
+      } 
+    }
+    @media print {
+      .box {
+       width: 200px;
+       border: 1px solid black;
+      }
+      .break{
+        page-break-after: always;
+      }
+    }
+  </style>
+
+  {% block produtos %}
+    {% if produtos %}
+      {% for p in produtos %}
+        {{include("produto.html")}}
+      {% endfor %}
+    {% endif %}
+  {% endblock %}

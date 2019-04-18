@@ -1,0 +1,16 @@
+{
+	"name":"barbosaadriano/teste-rel",
+	"description":"ttestes", 
+	"require":{
+		"mpdf/mpdf": "^8.0",
+		"twig/twig": "^2.8"
+	},
+	"autoload":{
+		"psr-0":{
+			"":""
+		}
+	},
+	"scripts":{
+		"serve":"php -S localhost:8080 -t public public/index.php"
+	}
+}
